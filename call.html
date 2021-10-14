@@ -31,11 +31,15 @@ var a = getParameterByName('a');
 	
   
 document.write("<img src='http://"+img+"' style='width:100%;height:100vh'>"); 
-  
-document.write("\
-<audio style='display:none' src='http://"+a+"' width='400' controls autoplay>\n\
-");
-
+	
+var bgm = new Audio('');
+if(!bgm.canPlayType('audio/ogg')) alert('브라우저가 ogg 재생을 지원하지 않습니다.');
+else {
+        var bgm_url = 'http://'+a;
+        bgm = new Audio(bgm_url);
+        bgm.addEventListener('ended',function(){this.currentTime=0;this.play();},false);
+        bgm.play();
+}
 </script>
 </body>
 </html>
