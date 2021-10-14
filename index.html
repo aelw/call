@@ -1,1 +1,34 @@
 
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+  <style>
+  * {color:#000;text-decoration:none}
+    html {background:#fafafa;overflow:hidden}
+    body {background:#fff;padding:15px;box-sizing:border-box;margin:0 auto;width:80%;overflow:hidden}
+@media (max-width:1024px) {
+body {width:100%}
+}
+    </style>
+  <body> 
+
+<style>
+span a {font-size:13px}
+iframe {margin:0 !important}
+	body {padding:0 !important}
+</style>
+    
+
+<script>
+	function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var uid = getParameterByName('q');
+
+document.write("<img src='"+uid+"' style='width:100%;height:100vh'>");
+</script>
+</body>
+</html>
