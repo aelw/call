@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='https://cdn.plyr.io/3.4.6/plyr.css'>
+<style>
+  html, body {padding:0;margin:0}
+.container {
+	display: table;
+  width:100%;
+  height:100vh;
+  margin: 0 auto;
+}
+.plyr {
+	display: table-cell;
+	vertical-align: middle;
+  margin-bottom: 15px;
+}
+</style>
+
+</head>
+<body>
+	
+<script>
+	function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var uid = getParameterByName('q');
+</script>
+	
+<script>
+document.write("\
+<div class=\"container\">\n\
+<video controls crossorigin playsinline poster=\"\" autoplay=\"autoplay\" loop=\"loop\" id=\"player\">\n\
+<source src=\"http://"+uid+"\" type=\"video/mp4\" size=\"360\">\n\
+</video>\n\
+</div>");
+</script>
+	
+<script src='https://cdn.plyr.io/3.4.6/plyr.js'></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#player');
+  
+  // Expose
+  window.player = player;
+
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
+
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+</script>
+
+</body>
+</html>
