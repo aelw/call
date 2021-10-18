@@ -6,6 +6,7 @@
   * {color:#000;text-decoration:none}
     html {background:#fafafa;overflow:hidden}
     body {background:#fff;padding:15px;box-sizing:border-box;margin:0 auto;width:80%;overflow:hidden}
+	  .containe {display:none}
 @media (max-width:1024px) {
 body {width:100%}
 }
@@ -31,15 +32,61 @@ var a = getParameterByName('a');
 	
   
 document.write("<img src='http://"+img+"' style='width:100%;height:100vh'>"); 
-	
-var bgm = new Audio('');
-if(!bgm.canPlayType('audio/ogg')) alert('브라우저가 ogg 재생을 지원하지 않습니다.');
-else {
-        var bgm_url = 'http://'+a;
-        bgm = new Audio(bgm_url);
-        bgm.addEventListener('ended',function(){this.currentTime=0;this.play();},false);
-        bgm.play();
-}
 </script>
+
+  <link rel='stylesheet' href='https://cdn.plyr.io/3.4.6/plyr.css'>
+
+<script>
+document.write("\
+<div class=\"container\">\n\
+<video controls crossorigin playsinline poster=\"\" loop=\"loop\" id=\"player\">\n\
+<source src=\"http://"+a+"\" type=\"video/mp4\" size=\"360\">\n\
+</video>\n\
+</div>");
+</script>
+	
+<script src='https://cdn.plyr.io/3.4.6/plyr.js'></script>
+	  
+<script>
+  document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#player');
+  
+  // Expose
+  window.player = player;
+
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
+
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+</script>
+	  
+	  
 </body>
 </html>
