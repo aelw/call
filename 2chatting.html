@@ -18,11 +18,8 @@
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-var id = getParameterByName('i');
+var img = getParameterByName('i');
 var name = getParameterByName('name');
-var c = getParameterByName('c');
-
-var img = getParameterByName('img');
 var a = getParameterByName('a');
 </script>
 
@@ -47,13 +44,13 @@ document.write("<h1>"+name+"</h1>");
 	  
 <script language=javascript>
 document.write("\
-<h2 style='color:#fafafa'><a href='http://stock.1002.pw/call/call.html?img="+img+"&a="+a+"' style='text-decoration:none;color:#777'>Call</a></h2>");
+<h2 style='color:#fafafa'><a href='http://stock.1002.pw/call/2call.html?img="+img+"&a="+a+"' style='text-decoration:none;color:#777'>Call</a></h2>");
 </script>	  
 	  
 <figure class="avatar" style='color:#fafafa'>
 
 <script>
-document.write("<img src=\"http://"+id+"\" /></figure>");
+document.write("<img src=\"http://"+img+"\" /></figure>");
 </script>
 
   </div>
