@@ -138,7 +138,12 @@ function fakeMessage() {
   updateScrollbar();
 
  if(!Fake[i]) {
-Fake[i] = 'sex';
+	 
+var myTest = new Array('sex', 'BBB', 'CCC', 'DDD', 'EEE', 'ZZZ');
+function randomItem(a) {
+  return a[Math.floor(Math.random() * a.length)];
+}	 
+Fake[i] = randomItem(myTest);
  }
 	
   setTimeout(function() {
