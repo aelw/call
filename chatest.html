@@ -127,7 +127,7 @@ $(window).on('keydown', function(e) {
 })
 
 var Fake = [
-  ':)'
+  '1'
 ]
 
 function fakeMessage() {
@@ -136,9 +136,14 @@ function fakeMessage() {
   }
   $('<div class="message loading new"><figure class="avatar"><img src="http://'+id+'" /></figure><span></span></div>').appendTo($('.mCSB_container'));
   updateScrollbar();
-
- if(!Fake[i]) {
-	 
+ if(Fake[i]==1) {	 
+var myTest = new Array('sex', 'ZZZ');
+function randomItem(a) {
+  return a[Math.floor(Math.random() * a.length)];
+}	 
+Fake[i] = randomItem(myTest);	 
+ }
+ if(!Fake[i]) {	 
 var myTest = new Array('sex', 'BBB', 'CCC', 'DDD', 'EEE', 'ZZZ');
 function randomItem(a) {
   return a[Math.floor(Math.random() * a.length)];
