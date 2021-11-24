@@ -47,20 +47,19 @@ function show_hide_box(an, width, height, borderStyle) {
 
   boxdiv = document.createElement('div');
   boxdiv.setAttribute('id', href);
+  boxdiv.style.zindex = 999999999;
   boxdiv.style.display = 'block';
   boxdiv.style.position = 'fixed';
   boxdiv.style.width = width + 'px';
   boxdiv.style.height = height + 'px';
   boxdiv.style.border = borderStyle;
   boxdiv.style.backgroundColor = '#fff';
-  boxdiv.style.classList.add('MyClass');
 
   var contents = document.createElement('iframe');
   contents.scrolling = 'no';
   contents.frameBorder = '0';
   contents.style.width = width + 'px';
   contents.style.height = height + 'px';
-  contents.style.classList.add('MyClass');
   contents.src = href;
 
   boxdiv.appendChild(contents);
