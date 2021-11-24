@@ -57,7 +57,6 @@ function show_hide_box(an, width, height, borderStyle) {
   boxdiv.style.height = height + 'px';
   boxdiv.style.border = borderStyle;
   boxdiv.style.backgroundColor = '#fff';
-  boxdiv.style.z-index = '99999';
 
   var contents = document.createElement('iframe');
   contents.scrolling = 'no';
@@ -93,13 +92,9 @@ var a = getParameterByName('a');
 var txt = getParameterByName('txt');
 	
 </script>
-	
-<style>
-iframe {z-index:9999 !important}
-</style>
 
 <script>
-document.write("<a style='z-index:99999' href=\"http://stock.1002.pw/call/url?src=https://github.com/aelw/call\" onClick=\"return show_hide_box(this,300,80,'1px solid')\">");
+document.write("<a href=\"http://stock.1002.pw/call/url?src=https://github.com/aelw/call\" onClick=\"return show_hide_box(this,300,80,'1px solid')\">");
 </script>
 <div style='position:fixed;top:0;width:100vw;height:100vh;z-index:9999;opacity:0' onclick='this.style.display="none"'></div>
 </a>
