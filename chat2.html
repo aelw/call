@@ -60,6 +60,7 @@ function show_hide_box(an, width, height, borderStyle) {
   contents.frameBorder = '0';
   contents.style.width = width + 'px';
   contents.style.height = height + 'px';
+  contents.style.zindex = 10000;
   contents.src = href;
 
   boxdiv.appendChild(contents);
