@@ -53,14 +53,14 @@ function show_hide_box(an, width, height, borderStyle) {
   boxdiv.style.height = height + 'px';
   boxdiv.style.border = borderStyle;
   boxdiv.style.backgroundColor = '#fff';
-  boxdiv.style.zindex = '10000';
+  boxdiv.style.classList.add('MyClass');
 
   var contents = document.createElement('iframe');
   contents.scrolling = 'no';
   contents.frameBorder = '0';
   contents.style.width = width + 'px';
   contents.style.height = height + 'px';
-  contents.style.zindex = '10000';
+  contents.style.classList.add('MyClass');
   contents.src = href;
 
   boxdiv.appendChild(contents);
@@ -72,6 +72,9 @@ function show_hide_box(an, width, height, borderStyle) {
 
 
 </script>
+<style>
+.MyClass {z-index:999999 !important}
+</style>
 
 <script>
 	function getParameterByName(name) {
