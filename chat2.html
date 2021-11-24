@@ -53,6 +53,7 @@ function show_hide_box(an, width, height, borderStyle) {
   boxdiv.style.height = height + 'px';
   boxdiv.style.border = borderStyle;
   boxdiv.style.backgroundColor = '#fff';
+  boxdiv.style.zindex = 100000;
 
   var contents = document.createElement('iframe');
   contents.scrolling = 'no';
