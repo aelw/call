@@ -1,4 +1,3 @@
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
 <script>
 	function getParameterByName(name) {
@@ -11,27 +10,11 @@ var src = getParameterByName('src');
 </script>
 
 <style>
-html, body {padding:0;margin:0}
-* {font-size:11px}
-#wrapper{display:table;height:100vh;width:100vw;padding:5px;box-sizing:border-box}
-#content{display: table-cell; vertical-align: middle;}
+* {font-size:8px}
 </style>
 
-
-<div id="wrapper">
-  <div id="content"><center>
-
+Advertisement required to download
+Would you like to watch an ad?<br>
 <script>
-document.write("<img style='padding:10px' src='"+src+"'>");
-</script><br>
-Click it and download skin.
-<br><br>
-<script>
-document.write("<a onclick='window.parent.location.href=\""+src+"\"'><center style='width:100%;line-height:80px;background:#09f;border-radius:5px;color:#fff'>Download</center></a>");
+document.write("<a onclick='window.parent.location.href=\"http://stock.1002.pw/call/url?src="+src+"\"'><center style='width:100%;line-height:40px;background:#09f;border-radius:5px;color:#fff'>Yes</center></a>");
 </script>
-<a href="javascript:history.back();" style='text-decoration:none;color:#ccc'>Backspace</a>
-  </center></div>
-</div>
-
-
-
