@@ -1,0 +1,26 @@
+
+<script>
+	function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var id = getParameterByName('i');
+var name = getParameterByName('name');
+var c = getParameterByName('c');
+
+var img = getParameterByName('i');
+var a = getParameterByName('a');
+var txt = getParameterByName('txt');
+</script>
+
+<style>
+* {font-size:8px}
+</style>
+
+You need to watch an ad to have a conversation<br>
+Would you like to watch an ad?<br>
+<script>
+document.write("<a onclick='window.parent.location.href=\"http://stock.1002.pw/call/2call?i="+img+"&amp;name="+name+"&amp;a="+a+"\"'><center style='width:100%;line-height:40px;background:#09f;border-radius:5px;color:#fff'>Yes</center></a>");
+</script>
