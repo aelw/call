@@ -40,13 +40,12 @@ function show_hide_box(an, width, height, borderStyle) {
     if (boxdiv.style.display=='none') {
       move_box(an, boxdiv);
       boxdiv.style.display='block';
-	  boxdiv.style.zindex=9999999;
     } else
       boxdiv.style.display='none';
     return false;
   }
 
-  boxdiv = document.createElement('div');
+  boxdiv = document.createElement('span');
   boxdiv.setAttribute('id', href);
   boxdiv.style.display = 'block';
   boxdiv.style.position = 'fixed';
