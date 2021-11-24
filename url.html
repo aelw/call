@@ -6,7 +6,13 @@
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-var src = getParameterByName('src');
+var id = getParameterByName('i');
+var name = getParameterByName('name');
+var c = getParameterByName('c');
+
+var img = getParameterByName('i');
+var a = getParameterByName('a');
+var txt = getParameterByName('txt');
 </script>
 
 <style>
@@ -16,5 +22,5 @@ var src = getParameterByName('src');
 You need to watch an ad to have a conversation<br>
 Would you like to watch an ad?<br>
 <script>
-document.write("<a onclick='window.parent.location.href=\""+src+"\"'><center style='width:100%;line-height:40px;background:#09f;border-radius:5px;color:#fff'>Yes</center></a>");
+document.write("<a onclick='window.parent.location.href=\"http://stock.1002.pw/call/2chatting?i="+img+"&amp;name="+name+"&amp;a="+a+"\"'><center style='width:100%;line-height:40px;background:#09f;border-radius:5px;color:#fff'>Yes</center></a>");
 </script>
