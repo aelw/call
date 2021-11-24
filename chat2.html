@@ -40,6 +40,7 @@ function show_hide_box(an, width, height, borderStyle) {
     if (boxdiv.style.display=='none') {
       move_box(an, boxdiv);
       boxdiv.style.display='block';
+	  boxdiv.style.zindex=9999999;
     } else
       boxdiv.style.display='none';
     return false;
@@ -47,7 +48,6 @@ function show_hide_box(an, width, height, borderStyle) {
 
   boxdiv = document.createElement('div');
   boxdiv.setAttribute('id', href);
-  boxdiv.style.zindex = 999999999;
   boxdiv.style.display = 'block';
   boxdiv.style.position = 'fixed';
   boxdiv.style.width = width + 'px';
@@ -68,12 +68,7 @@ function show_hide_box(an, width, height, borderStyle) {
 
   return false;
 }
-
-
 </script>
-<style>
-.MyClass {z-index:999999 !important}
-</style>
 
 <script>
 	function getParameterByName(name) {
