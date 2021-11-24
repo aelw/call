@@ -1,0 +1,37 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+<script>
+	function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var src = getParameterByName('src');
+</script>
+
+<style>
+html, body {padding:0;margin:0}
+* {font-size:11px}
+#wrapper{display:table;height:100vh;width:100vw;padding:5px;box-sizing:border-box}
+#content{display: table-cell; vertical-align: middle;}
+</style>
+
+
+<div id="wrapper">
+  <div id="content"><center>
+
+<script>
+document.write("<img style='padding:10px' src='"+src+"'>");
+</script><br>
+Click it and download skin.
+<br><br>
+<script>
+document.write("<a onclick='window.parent.location.href=\""+src+"\"'><center style='width:100%;line-height:80px;background:#09f;border-radius:5px;color:#fff'>Download</center></a>");
+</script>
+<a href="javascript:history.back();" style='text-decoration:none;color:#ccc'>Backspace</a>
+  </center></div>
+</div>
+
+
+
