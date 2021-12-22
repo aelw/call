@@ -294,7 +294,7 @@ Message Box
   padding: 11px;
   position: relative;
   border-radius: 20px;
-  height: 42px;
+  height: 40px;
 }
 .message-box .message-input {
   background: none;
