@@ -17,6 +17,17 @@ body {
   height: 100%;
 }
 
+.avenue-messenger::before{
+        content: "";
+        opacity: 0.5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: #000;
+    }
+
 body {
   background: linear-gradient(135deg, #044f48, #345093);
   background-size: cover;
