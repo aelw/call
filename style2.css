@@ -71,7 +71,6 @@ Chat Title
   position: relative;
   z-index: 2;
   width: 100%;
-  border-bottom: 1px solid #ccc;
   color: #777;
   background-color: #fff;
   text-transform: uppercase;
@@ -300,7 +299,6 @@ Message Box
   position: relative;
   border-radius: 20px;
   height: 14px;
-  border: 1px solid #ccc;
 }
 .message-box .message-input {
   background: none;
@@ -668,7 +666,7 @@ Bounce
     right: 0 !important;
     bottom: 0 !important;
     border-radius: 0 !important;
-    background: #fff;
+    background-image: linear-gradient( 135deg, #69FF97 10%, #00E4FF 100%);
   }
 
   .avenue-messenger div.agent-face {
