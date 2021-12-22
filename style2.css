@@ -283,7 +283,6 @@ Messages
 Message Box
 --------------------*/
 .message-box {
-  flex: 0 1 42px;
   width: 90%;
   background: #fff;
   margin: 2px auto;
@@ -295,7 +294,7 @@ Message Box
   padding: 11px;
   position: relative;
   border-radius: 20px;
-  height: 14px;
+  height: 42px;
 }
 .message-box .message-input {
   background: none;
