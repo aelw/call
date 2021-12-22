@@ -19,7 +19,7 @@
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 var id = getParameterByName('i');
-var name = getParameterByName('name');
+var color = getParameterByName('color');
 var c = getParameterByName('c');
 
 var img = getParameterByName('i');
@@ -28,9 +28,23 @@ var txt = getParameterByName('txt');
 	
 </script>
 	
+<style>
+.avenue-messenger::before{
+        content: "";
+        opacity: 0.5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: #000;
+    }
+</style>
+	
 <script>
 document.write("\
-<section onclick=\"location.href='http://stock.1002.pw/call/2c.html?i="+img+"&name="+name+"&a="+a+"'\" class=\"avenue-messenger\">");
+<section onclick=\"location.href='http://stock.1002.pw/call/2c.html?i="+img+"&name="+name+"&a="+a+"'\" style=\"background-image: linear-gradient( \n\
+135deg, #69FF97 10%, #00E4FF 100%);\" class=\"avenue-messenger\">");
 </script>
 	
   <div class="menu">
